@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<my>
+	<interceptors>
+		<interceptor name="loginInterceptor" class="myInterceptor.LoginInterceptor"></interceptor>
+	</interceptors>
+	<actions>
+		<action name="loginAction" method = "execute" class="action.UserAction">
+			<result name="success" type="redirect">/operate.jsp</result>
+			<result name="false" type="redirect">/login.jsp</result>
+			<interceptor-ref name="loginInterceptor"></interceptor-ref>
+		</action>
+		<action name="watchPersonalInfor" method = "execute" class="action.WatchPersonalInfor">
+			<result name="success" type="redirect">/watchPersonalInfor.jsp</result>
+		</action>
+	</actions>
+</my>
